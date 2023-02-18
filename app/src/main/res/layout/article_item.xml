@@ -3,29 +3,30 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/white"
     android:layout_margin="20dp">
 
     <ProgressBar
         android:id="@+id/ProgressBar_for_image"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@id/item_cardview"
-        app:layout_constraintEnd_toEndOf="@id/item_cardview"
-        app:layout_constraintStart_toStartOf="@id/item_cardview"
-        app:layout_constraintTop_toTopOf="@id/item_cardview" />
+        app:layout_constraintBottom_toBottomOf="@id/item_cardView"
+        app:layout_constraintEnd_toEndOf="@id/item_cardView"
+        app:layout_constraintStart_toStartOf="@id/item_cardView"
+        app:layout_constraintTop_toTopOf="@id/item_cardView" />
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/item_cardview"
+        android:id="@+id/item_cardView"
         android:layout_width="match_parent"
         android:layout_height="250dp"
-        app:cardCornerRadius="24dp"
-        app:layout_constraintTop_toTopOf="parent">
+        app:cardCornerRadius="15dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/article_author">
 
         <ImageView
-            android:id="@+id/item_image_in_cardview"
+            android:id="@+id/item_image_in_cardView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="match_parent"
+            android:src="@drawable/football" />
 
     </androidx.cardview.widget.CardView>
 
@@ -34,18 +35,21 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
-        android:textColor="@color/green"
+        android:text="BBC News"
+        android:textColor="@color/gray"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/item_cardview" />
+        app:layout_constraintTop_toBottomOf="@id/item_cardView" />
+
     <TextView
         android:id="@+id/article_description"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
-        android:textColor="@color/black"
-        android:textSize="18sp"
+        android:text="Why are football's biggest clubs starting a new tournament?"
+        android:textColor="@color/dark_gray"
+        android:textSize="22sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/article_author" />

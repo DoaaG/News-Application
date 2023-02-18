@@ -3,8 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.newsapplication">
 
-    // permission for internet
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -17,23 +16,20 @@
         android:theme="@style/Theme.NewsApplication"
         tools:targetApi="31">
         <activity
-            android:name=".SplashActivity"
-            style="@style/noActionBar"
-            android:exported="false" />
-        <activity
-            android:name=".CategoriesActivity"
-            style="@style/noActionBar"
-            android:exported="false" />
-        <activity
             android:name=".HomeActivity"
-            style="@style/noActionBar"
-            android:exported="true">
+            android:theme="@style/noActionBar"
+            android:exported="true"
+            android:label="@string/title_activity_categories">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".SplashActivity"
+            android:theme="@style/noActionBar"
+            android:exported="false" />
     </application>
 
 </manifest>
