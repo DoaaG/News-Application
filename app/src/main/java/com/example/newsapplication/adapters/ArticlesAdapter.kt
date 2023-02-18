@@ -1,7 +1,6 @@
-package com.example.newsapplication
+package com.example.newsapplication.adapters
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
@@ -23,7 +22,7 @@ class ArticlesAdapter (var articlesList : List<ArticlesItem?>): RecyclerView.Ada
 
         // to download image
         Glide.with(holder.binding.root).load(items?.url)
-            .into(holder.binding.itemImageInCardview)
+            .into(holder.binding.itemImageInCardView)
 
 
     }
