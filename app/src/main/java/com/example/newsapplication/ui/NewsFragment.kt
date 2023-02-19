@@ -14,6 +14,7 @@ import com.example.newsapplication.adapters.ArticlesAdapter
 import com.example.newsapplication.api.ApiManeger
 import com.example.newsapplication.databinding.FragmentNewsBinding
 import com.example.newsapplication.model.ArticlesResponse
+import com.example.newsapplication.model.Category
 import com.example.newsapplication.model.TabsItem
 import com.example.newsapplication.model.TabsResponse
 import com.google.android.material.tabs.TabLayout
@@ -21,7 +22,7 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class NewsFragment : Fragment() {
+class NewsFragment(var category: Category) : Fragment() {
     lateinit var newsBinding: FragmentNewsBinding
     lateinit var Adapter: ArticlesAdapter
 
@@ -42,7 +43,7 @@ class NewsFragment : Fragment() {
     }
 
     fun getTabs() {
-        ApiManeger.getApis().getTabs(Constants.Apikey)?.enqueue(object : Callback<TabsResponse> {
+        ApiManeger.getApis().getTabs(Constants.Apikey,category.id)?.enqueue(object : Callback<TabsResponse> {
             override fun onResponse(
                 call: Call<TabsResponse>,
                 response: Response<TabsResponse>

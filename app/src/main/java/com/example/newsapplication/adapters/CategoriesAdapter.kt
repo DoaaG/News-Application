@@ -15,7 +15,7 @@ import com.google.android.material.card.MaterialCardView
 
 class CategoriesAdapter(var list: List<Category>) :
     RecyclerView.Adapter<CategoriesAdapter.CategoriesViewHolder>() {
-    inner class CategoriesViewHolder(var view: View) : RecyclerView.ViewHolder(view) {
+    inner class CategoriesViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val categoryTitle: TextView = view.findViewById(R.id.category_name)
         val categoryImage: ImageView = view.findViewById(R.id.imageView_item)
     }
@@ -25,7 +25,7 @@ class CategoriesAdapter(var list: List<Category>) :
             LayoutInflater.from(parent.context).inflate(viewTypeIndex(viewType), parent, false)
         return CategoriesViewHolder(view)
     }
-
+    var onNewsClickListener: OnNewsClick? = null
     @RequiresApi(Build.VERSION_CODES.M)
     override fun onBindViewHolder(holder: CategoriesViewHolder, position: Int) {
         val item = list[position]
@@ -33,6 +33,10 @@ class CategoriesAdapter(var list: List<Category>) :
         holder.categoryImage.setImageResource(item.imageId)
         cardBackground.setBackgroundColor(cardBackground.context.getColor(item.colorId))
         holder.categoryTitle.text = item.title
+
+        holder.categoryImage.setOnClickListener{
+            onNewsClickListener!!.newsClick(item,position)
+        }
     }
 
     override fun getItemCount(): Int = list.size
