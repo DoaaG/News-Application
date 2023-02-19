@@ -5,33 +5,45 @@ import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
+import com.example.newsapplication.adapters.OnCategoryClick
 import com.example.newsapplication.databinding.ActivityHomeBinding
+import com.example.newsapplication.model.Category
 import com.example.newsapplication.ui.CategoriesFragment
 import com.example.newsapplication.ui.NewsFragment
+import com.example.newsapplication.ui.SettingsFragment
 
 class HomeActivity : AppCompatActivity() {
     private lateinit var binding: ActivityHomeBinding
+    val categoriesFragment = CategoriesFragment()
+    val settingsFragment  = SettingsFragment()
+//    val newsFragment = NewsFragment()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
         val drawerLayout: DrawerLayout = binding.drawerLayout
-        showFragment(CategoriesFragment())  // check for textview duplication 'pick category'
-
+        showFragment(categoriesFragment)
         binding.appBarCategories.drawerMenuIcon.setOnClickListener {
             drawerLayout.open()
         }
         binding.categoriesInDrawer.setOnClickListener {
             drawerLayout.closeDrawers()
-            showFragment(CategoriesFragment())
+            showFragment(categoriesFragment)
 
         }
         binding.settingsInDrawer.setOnClickListener {
             drawerLayout.closeDrawers()
-            showFragment(NewsFragment())
-//            showFragment(SettingsFragment())
+            showFragment(settingsFragment)
+//            showFragment(newsFragment)
         }
+        categoriesFragment.onCategoryClick = object : OnCategoryClick {
+            override fun OnCategoryClick(category: Category) {
+                showFragment(NewsFragment(category))
+            }
+
+        }
+
     }
 
     private fun showFragment(fragment: Fragment) {
