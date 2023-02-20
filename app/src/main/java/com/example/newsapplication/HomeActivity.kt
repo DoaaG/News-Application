@@ -29,20 +29,22 @@ class HomeActivity : AppCompatActivity() {
         }
         binding.categoriesInDrawer.setOnClickListener {
             drawerLayout.closeDrawers()
+            binding.appBarCategories.textInAppbar.text ="News App"
             showFragment(categoriesFragment)
 
         }
         binding.settingsInDrawer.setOnClickListener {
             drawerLayout.closeDrawers()
+            binding.appBarCategories.textInAppbar.text ="Settings"
             showFragment(settingsFragment)
-//            showFragment(newsFragment)
         }
+
         categoriesFragment.onCategoryClick = object : OnCategoryClick {
             override fun OnCategoryClick(category: Category) {
                 val fragment = NewsFragment.getInstance(category)
+                binding.appBarCategories.textInAppbar.text = category.title
                 showFragment(fragment)
             }
-
         }
 
     }

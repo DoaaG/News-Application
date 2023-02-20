@@ -40,6 +40,7 @@ class CategoriesFragment : Fragment() {
         Adapeter.onNewsClickListener = object : OnNewsClick {
             override fun newsClick(category: Category, position: Int) {
                 onCategoryClick!!.OnCategoryClick(category)
+//                binding.appBarCategories.textInAppbar.text
 //                childFragmentManager.beginTransaction().replace(R.id.fragment_container, NewsFragment())
 //                    .commit()
             }
