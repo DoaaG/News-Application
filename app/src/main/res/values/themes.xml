@@ -22,4 +22,46 @@
     <style name="Theme.NewsApplication.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="Theme.NewsApplication.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="LeftCardView">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">22dp</item>
+        <item name="cornerSizeTopLeft">22dp</item>
+        <item name="cornerSizeBottomLeft">22dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+    </style>
+
+    <style name="RightCardView">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">22dp</item>
+        <item name="cornerSizeTopLeft">22dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+        <item name="cornerSizeBottomRight">22dp</item>
+    </style>
+    <style name="LeftCardViewBackground" parent="@style/Widget.MaterialComponents.CardView">  // must be add to apply corners
+        <item name="shapeAppearanceOverlay">@style/LeftCardView</item>
+    </style>
+
+    <style name="RightCardViewBackground" parent="@style/Widget.MaterialComponents.CardView">  // must be add to apply corners
+        <item name="shapeAppearanceOverlay">@style/RightCardView</item>
+    </style>
+
+    <style name="textview" >
+        <item name="android:textSize">18sp</item>
+        <item name="android:layout_marginTop">30dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="setting_selection_box" >
+        <item name="android:gravity">start|center</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:background">@color/white</item>
+        <item name="strokeColor">@color/green</item>
+        <item name="android:strokeColor">@color/green</item>
+        <item name="android:drawableEnd">@drawable/ic_arrow_drop_down</item>
+        <item name="android:textColor">@color/green</item>
+    </style>
+
 </resources>
