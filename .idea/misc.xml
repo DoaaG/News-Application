@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Android projects/Route Projects/practicee/NewsApplication/app/src/main/res/drawable/ic_arrow_drop_down.xml" value="0.171" />
         <entry key="..\:/Android projects/Route Projects/practicee/NewsApplication/app/src/main/res/drawable/ic_menu.xml" value="0.1835" />
         <entry key="..\:/Android projects/Route Projects/practicee/NewsApplication/app/src/main/res/drawable/ic_menu_camera.xml" value="0.1835" />
         <entry key="..\:/Android projects/Route Projects/practicee/NewsApplication/app/src/main/res/drawable/ic_menu_drawer.xml" value="0.159" />
@@ -16,6 +17,7 @@
         <entry key="..\:/Android projects/Route Projects/practicee/NewsApplication/app/src/main/res/drawable/side_nav_bar.xml" value="0.1835" />
         <entry key="..\:/Android projects/Route Projects/practicee/NewsApplication/app/src/main/res/drawable/tabcolor.xml" value="0.1" />
         <entry key="..\:/Android projects/Route Projects/practicee/NewsApplication/app/src/main/res/drawable/tabs_selection.xml" value="0.116" />
+        <entry key="..\:/Android projects/Route Projects/practicee/NewsApplication/app/src/main/res/drawable/textview_corners.xml" value="0.171" />
         <entry key="..\:/Android projects/Route Projects/practicee/NewsApplication/app/src/main/res/drawable/toolbar_corners.xml" value="0.1835" />
         <entry key="..\:/Android projects/Route Projects/practicee/NewsApplication/app/src/main/res/drawable/unselected_tab_color.xml" value="0.116" />
         <entry key="..\:/Android projects/Route Projects/practicee/NewsApplication/app/src/main/res/layout/activity_categories.xml" value="0.264" />
@@ -35,7 +37,7 @@
         <entry key="..\:/Android projects/Route Projects/practicee/NewsApplication/app/src/main/res/layout/fragment_news.xml" value="0.14266304347826086" />
         <entry key="..\:/Android projects/Route Projects/practicee/NewsApplication/app/src/main/res/layout/fragment_settings.xml" value="0.2359375" />
         <entry key="..\:/Android projects/Route Projects/practicee/NewsApplication/app/src/main/res/layout/fragment_slideshow.xml" value="0.25" />
-        <entry key="..\:/Android projects/Route Projects/practicee/NewsApplication/app/src/main/res/layout/left_item.xml" value="0.25" />
+        <entry key="..\:/Android projects/Route Projects/practicee/NewsApplication/app/src/main/res/layout/left_item.xml" value="0.2" />
         <entry key="..\:/Android projects/Route Projects/practicee/NewsApplication/app/src/main/res/layout/nav_header_categories.xml" value="0.25" />
         <entry key="..\:/Android projects/Route Projects/practicee/NewsApplication/app/src/main/res/layout/right_item.xml" value="0.18671875" />
         <entry key="..\:/Android projects/Route Projects/practicee/NewsApplication/app/src/main/res/menu/activity_main_drawer.xml" value="0.4" />

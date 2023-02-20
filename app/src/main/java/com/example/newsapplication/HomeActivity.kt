@@ -16,7 +16,7 @@ class HomeActivity : AppCompatActivity() {
     private lateinit var binding: ActivityHomeBinding
     val categoriesFragment = CategoriesFragment()
     val settingsFragment  = SettingsFragment()
-//    val newsFragment = NewsFragment()
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,7 +39,8 @@ class HomeActivity : AppCompatActivity() {
         }
         categoriesFragment.onCategoryClick = object : OnCategoryClick {
             override fun OnCategoryClick(category: Category) {
-                showFragment(NewsFragment(category))
+                val fragment = NewsFragment.getInstance(category)
+                showFragment(fragment)
             }
 
         }

@@ -31,7 +31,7 @@ class CategoriesAdapter(var list: List<Category>) :
         val item = list[position]
         val cardBackground = holder.itemView as MaterialCardView
         holder.categoryImage.setImageResource(item.imageId)
-        cardBackground.setBackgroundColor(cardBackground.context.getColor(item.colorId))
+        cardBackground.setCardBackgroundColor(cardBackground.context.getColor(item.colorId))
         holder.categoryTitle.text = item.title
 
         holder.categoryImage.setOnClickListener{
