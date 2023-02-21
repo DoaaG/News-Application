@@ -16,15 +16,23 @@
         android:theme="@style/Theme.NewsApplication"
         tools:targetApi="31">
         <activity
-            android:name=".HomeActivity"
-            android:theme="@style/noActionBar"
+            android:name=".FullArticleActivity"
             android:exported="false"
-            android:label="@string/title_activity_categories">
+            android:theme="@style/noActionBar" />
+        <activity
+            android:name=".HomeActivity"
+            android:exported="false"
+            android:label="@string/title_activity_categories"
+            android:theme="@style/noActionBar">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.SEARCH"/> -->
+            <!-- </intent-filter> -->
         </activity>
         <activity
             android:name=".SplashActivity"
-            android:theme="@style/noActionBar"
-            android:exported="true">
+            android:exported="true"
+            android:theme="@style/noActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

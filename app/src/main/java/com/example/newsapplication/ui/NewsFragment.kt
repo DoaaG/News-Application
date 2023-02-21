@@ -27,7 +27,6 @@ class NewsFragment : Fragment() {
     ): View? {
         newsBinding = FragmentNewsBinding.inflate(inflater, container, false)
         return newsBinding.root
-//        viewModel = ViewModelProvider(this)[NewsViewModel::class.java]
     }
 
     companion object { // another way to select the required category

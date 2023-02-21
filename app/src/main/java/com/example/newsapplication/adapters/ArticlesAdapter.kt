@@ -1,11 +1,15 @@
 package com.example.newsapplication.adapters
 
+import android.app.Activity
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.newsapplication.databinding.ArticleItemBinding
 import com.example.newsapplication.model.ArticlesItem
+import com.example.newsapplication.ui.CategoriesFragment
+import com.example.newsapplication.ui.NewsFragment
 
 class ArticlesAdapter (var articlesList : List<ArticlesItem?>): RecyclerView.Adapter<ArticlesAdapter.ArticlesViewHolder>() {
     inner class ArticlesViewHolder(var binding :ArticleItemBinding):RecyclerView.ViewHolder(binding.root){}
@@ -21,8 +25,9 @@ class ArticlesAdapter (var articlesList : List<ArticlesItem?>): RecyclerView.Ada
         holder.binding.articleDescription.text = items?.description
 
         // to download image
-        Glide.with(holder.binding.root).load(items?.url)
-            .into(holder.binding.itemImageInCardView)
+        Glide.with(holder.itemView)
+            .load(items?.urlToImage)
+            .into(holder.binding.image)
 
 
     }
