@@ -12,7 +12,12 @@ import com.example.newsapplication.ui.CategoriesFragment
 import com.example.newsapplication.ui.NewsFragment
 
 class ArticlesAdapter (var articlesList : List<ArticlesItem?>): RecyclerView.Adapter<ArticlesAdapter.ArticlesViewHolder>() {
-    inner class ArticlesViewHolder(var binding :ArticleItemBinding):RecyclerView.ViewHolder(binding.root){}
+    inner class ArticlesViewHolder(var binding :ArticleItemBinding):RecyclerView.ViewHolder(binding.root){
+        fun bind(article :ArticlesItem?){
+            binding.article = article
+            binding.executePendingBindings()
+        }
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ArticlesViewHolder {
         var bind = ArticleItemBinding.inflate(LayoutInflater.from(parent.context),parent,false)
@@ -21,14 +26,7 @@ class ArticlesAdapter (var articlesList : List<ArticlesItem?>): RecyclerView.Ada
 
     override fun onBindViewHolder(holder: ArticlesViewHolder, position: Int) {
         var items = articlesList[position]
-        holder.binding.articleAuthor.text = items?.author
-        holder.binding.articleDescription.text = items?.description
-
-        // to download image
-        Glide.with(holder.itemView)
-            .load(items?.urlToImage)
-            .into(holder.binding.image)
-
+          holder.bind(items)   // for binding
 
     }
 

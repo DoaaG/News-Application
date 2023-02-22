@@ -21,6 +21,11 @@ class NewsFragment : Fragment() {
     lateinit var viewModel: NewsViewModel
     var selectedCategory: Category? = null
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        viewModel = ViewModelProvider(this)[NewsViewModel::class.java]
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -41,7 +46,6 @@ class NewsFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         Adapter = ArticlesAdapter(listOf())  // empty list then change the content using notify
         initListeners()
-        viewModel = ViewModelProvider(this)[NewsViewModel::class.java]
         selectedCategory?.let { viewModel.getTabs(it) }
         newsBinding.itemsRecycler.adapter = Adapter
         observeViewModel()
@@ -70,7 +74,7 @@ class NewsFragment : Fragment() {
                 newsBinding.ProgressBar.visibility = View.GONE
 
         }
-        viewModel.toastLiveData.observe(viewLifecycleOwner){
+        viewModel.toastLiveData.observe(viewLifecycleOwner) {
             Toast.makeText(requireActivity(), it, Toast.LENGTH_LONG).show()
         }
     }
@@ -90,6 +94,7 @@ class NewsFragment : Fragment() {
             override fun onTabReselected(tab: TabLayout.Tab?) {
                 val id = tab!!.tag as String
                 viewModel.getArticles(id)
+//                Adapter.notifyDataSetChanged()
             }
 
         })

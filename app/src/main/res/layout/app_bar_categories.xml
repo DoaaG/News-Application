@@ -1,120 +1,127 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/white"
-    tools:context=".HomeActivity">
+    xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/Appbar"
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:background="@drawable/toolbar_corners"
-        android:theme="@style/Theme.NewsApplication.AppBarOverlay"
-        app:elevation="0dp">
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".HomeActivity">
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/Appbar"
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:background="@drawable/toolbar_corners"
-            app:popupTheme="@style/Theme.NewsApplication.PopupOverlay">
+            android:theme="@style/Theme.NewsApplication.AppBarOverlay"
+            app:elevation="0dp">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <ImageView
-                    android:id="@+id/drawer_menu_icon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="15dp"
-                    android:src="@drawable/ic_menu_drawer"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <ImageView
-                    android:id="@+id/drawer_search_icon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="15dp"
-                    android:src="@drawable/ic_search"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-                <TextView
-                    android:id="@+id/text_in_appbar"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:text="News App"
-                    android:textColor="@color/white"
-                    android:textSize="25dp"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                android:layout_height="100dp"
+                android:background="@drawable/toolbar_corners"
+                app:popupTheme="@style/Theme.NewsApplication.PopupOverlay">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/search_content"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_margin="28dp"
-                    android:padding="4dp"
-                    android:background="@drawable/search_corner"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
-
-                    <EditText
-                        android:id="@+id/search_space_in_appbar"
-                        style="@style/search_space"
-                        android:layout_width="0dp"
-                        android:gravity="start"
-                        android:layout_height="match_parent"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toStartOf="@+id/green_search_icon"
-                        app:layout_constraintStart_toEndOf="@+id/close_icon"
-                        app:layout_constraintTop_toTopOf="parent" />
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
                     <ImageView
-                        android:id="@+id/close_icon"
+                        android:id="@+id/drawer_menu_icon"
                         android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-
-                        android:src="@drawable/ic_close"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp"
+                        android:src="@drawable/ic_menu_drawer"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <ImageView
-                        android:id="@+id/green_search_icon"
+                        android:id="@+id/drawer_search_icon"
                         android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-
-                        android:src="@drawable/ic_search_space"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp"
+                        android:src="@drawable/ic_search"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/text_in_appbar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="News App"
+                        android:textColor="@color/white"
+                        android:textSize="25dp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/search_content"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="28dp"
+                        android:padding="4dp"
+                        android:background="@drawable/search_corner"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <EditText
+                            android:id="@+id/search_space_in_appbar"
+                            style="@style/search_space"
+                            android:layout_width="0dp"
+                            android:gravity="start"
+                            android:layout_height="match_parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/green_search_icon"
+                            app:layout_constraintStart_toEndOf="@+id/close_icon"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/close_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+
+                            android:src="@drawable/ic_close"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/green_search_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+
+                            android:src="@drawable/ic_search_space"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
 
+            </androidx.appcompat.widget.Toolbar>
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.appbar.AppBarLayout>
 
-
-        </androidx.appcompat.widget.Toolbar>
-
-    </com.google.android.material.appbar.AppBarLayout>
-
-    <include
-        android:id="@+id/appbar_include"
-        layout="@layout/content_home" />
+        <include
+            android:id="@+id/appbar_include"
+            layout="@layout/content_home" />
 
 
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id "org.jetbrains.kotlin.kapt"
 }
 
 android {
@@ -30,11 +31,13 @@ android {
         jvmTarget = '1.8'
     }
     buildFeatures {
-        viewBinding = true
+        dataBinding = true
+//        viewBinding = true
     }
 }
 
 dependencies {
+
 
     //retrofit
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
