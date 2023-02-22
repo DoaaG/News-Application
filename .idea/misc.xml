@@ -26,6 +26,7 @@
         <entry key="..\:/Android projects/Route Projects/practicee/NewsApplication/app/src/main/res/drawable/toolbar_corners.xml" value="0.1835" />
         <entry key="..\:/Android projects/Route Projects/practicee/NewsApplication/app/src/main/res/drawable/unselected_tab_color.xml" value="0.116" />
         <entry key="..\:/Android projects/Route Projects/practicee/NewsApplication/app/src/main/res/layout/activity_categories.xml" value="0.264" />
+        <entry key="..\:/Android projects/Route Projects/practicee/NewsApplication/app/src/main/res/layout/activity_full_article.xml" value="0.2359375" />
         <entry key="..\:/Android projects/Route Projects/practicee/NewsApplication/app/src/main/res/layout/activity_home.xml" value="0.2" />
         <entry key="..\:/Android projects/Route Projects/practicee/NewsApplication/app/src/main/res/layout/activity_home_categories.xml" value="0.25" />
         <entry key="..\:/Android projects/Route Projects/practicee/NewsApplication/app/src/main/res/layout/activity_main.xml" value="0.25" />
@@ -39,7 +40,7 @@
         <entry key="..\:/Android projects/Route Projects/practicee/NewsApplication/app/src/main/res/layout/fragment_gallery.xml" value="0.25" />
         <entry key="..\:/Android projects/Route Projects/practicee/NewsApplication/app/src/main/res/layout/fragment_home.xml" value="0.25" />
         <entry key="..\:/Android projects/Route Projects/practicee/NewsApplication/app/src/main/res/layout/fragment_home_category.xml" value="0.25" />
-        <entry key="..\:/Android projects/Route Projects/practicee/NewsApplication/app/src/main/res/layout/fragment_news.xml" value="0.14266304347826086" />
+        <entry key="..\:/Android projects/Route Projects/practicee/NewsApplication/app/src/main/res/layout/fragment_news.xml" value="0.264" />
         <entry key="..\:/Android projects/Route Projects/practicee/NewsApplication/app/src/main/res/layout/fragment_settings.xml" value="0.2359375" />
         <entry key="..\:/Android projects/Route Projects/practicee/NewsApplication/app/src/main/res/layout/fragment_slideshow.xml" value="0.25" />
         <entry key="..\:/Android projects/Route Projects/practicee/NewsApplication/app/src/main/res/layout/left_item.xml" value="0.2" />
